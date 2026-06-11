@@ -23,6 +23,7 @@ body {
   height: 100%;
   background-image: url(img/ring.jpg);
   background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 
