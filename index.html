@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lorem & Ipsum Wedding</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rancho&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Countdown Timer -->
+    <link rel="stylesheet" href="/website-pernikahan/countdown/default.css" />
+    <script src="/website-pernikahan/countdown/simplyCountdown.umd.js"></script>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <section
+      id="hero"
+      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-item- text-white"
+    >
+      <main>
+        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h1>Lorem & Ipsum</h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam :</p>
+        <div class="simply-countdown"></div>
+        <a href="#undangan" class="btn btn-lg mt-4">Lihat Undangan</a>
+      </main>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // .my-super-countdown is an example
+      // you can target any HTML element with any CSS selector
+      simplyCountdown(".simply-countdown", {
+        // Target date (Required)
+        year: 2026, // Target year [YYYY]
+        month: 12, // Target month [1-12]
+        day: 25, // Target day [1-31]
+        hours: 0, // Target hours [0-23]
+        minutes: 0, // Target minutes [0-59]
+        seconds: 0, // Target seconds [0-59]
+      });
+    </script>
+  </body>
+</html>
