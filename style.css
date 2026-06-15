@@ -9,8 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
   min-height: 4000px;
   overflow-x: hidden;
-  width: 100%;
-  position: relative;
 }
 
 .hero {
