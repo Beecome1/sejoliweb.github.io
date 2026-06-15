@@ -3,16 +3,12 @@
   --bg: #0c0c0c;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-}
+
 body {
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   min-height: 4000px;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -64,8 +60,8 @@ body {
 }
 
 .mynavbar {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(4px);
+  background-color: rgba(54, 54, 54, 0.4) !important;
+  backdrop-filter: blur(3px);
 }
 
 .mynavbar .offcanvas {
@@ -83,7 +79,7 @@ body {
 }
 
 .home .container {
-  background-image: url(img/flower-banner.png);
+  background-image: url(img/floral-pattern1.png);
   background-size: cover;
   min-height: 100vh;
   margin-top: -5.7rem;
