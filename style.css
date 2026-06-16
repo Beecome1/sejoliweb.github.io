@@ -86,11 +86,13 @@ body {
   padding-bottom: 5rem;
 }
 
-.home h2 {
+.home h2,
+.info h2,
+.story h2,
+.gallery h2 {
   color: var(--pink);
   font-family: "Rancho", cursive;
-  font-size: 5rem;
-  font-weight: bold;
+  font-size: 4.5rem;
 }
 
 .home h3 {
@@ -110,8 +112,8 @@ body {
 
 .home h3 {
   font-family: "Rancho", cursive;
-  font-size: 2.5rem;
-  color: var(--pink);
+  font-size: 2.3rem;
+  color: black;
 }
 
 .home .couple img {
@@ -141,11 +143,6 @@ body {
   padding-bottom: 6rem;
 }
 
-.info h2 {
-  color: var(--pink);
-  font-family: "Rancho", cursive;
-}
-
 .info .alamat {
   font-size: 1.1rem;
 }
@@ -171,9 +168,129 @@ body {
   font-size: 1rem;
 }
 
+.story,
+.gallery {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.story span,
+.gallery span {
+  text-transform: uppercase;
+  color: #949494;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.story p,
+.gallery p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: #949494;
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li:after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: #949494;
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #949494;
+  padding: 2rem;
+  position: relative;
+  border-radius: 14px;
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #949494;
+  border-right: 0 solid #949494;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ffffff;
+  border-right: 0 solid #ffffff;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
+.gallery {
+  background-color: rgb(252, 199, 199);
+}
 /* Media Query */
 
 /* Extra Large */
+
 @media (max-width: 1200px) {
   .home .heart {
     transform: translateX(-50%) translateY(60px);
@@ -185,12 +302,48 @@ body {
   html {
     font-size: 75%;
   }
+
   .home .heart {
     display: none;
   }
-}
-.sticky-top {
-  overflow: hidden;
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc(100% - 200px);
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 /* Tablet */
@@ -211,5 +364,23 @@ body {
 @media (max-width: 576px) {
   html {
     font-size: 60%;
+  }
+
+  .timeline li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31px;
   }
 }
